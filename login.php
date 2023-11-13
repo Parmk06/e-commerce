@@ -115,7 +115,7 @@ if (isset($_POST['login'])) {
             </div>
             <button class="my-button" style="font-size: 20px;" name="login">Login</button>
         </form>
-        <p style="font-size: 14px;">Don't have an account? <a class="register-link" href="users_registration.php">Create Account</a></p>
+        <p style="font-size: 14px;">Don't have an account? <a class="register-link" href="registration.php">Create Account</a></p>
     </div>
 </body>
 </html>
