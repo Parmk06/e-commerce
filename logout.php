@@ -1,7 +1,7 @@
 <?php
 // session has started
 session_start();
-$_SESSION = array();
+$_SESSIONS = array();
 
 // session has destroyed
 session_destroy();
