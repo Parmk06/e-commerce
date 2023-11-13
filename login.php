@@ -1,6 +1,30 @@
 <?php
 include('includes/connect.php');
+if (isset($_POST['login'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
+    $selectUserQuery = "SELECT * FROM users WHERE email='$email'";
+    $result = mysqli_query($con, $selectUserQuery);
+
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        $hashedPassword = $row['password'];
+
+        if (password_verify($password, $hashedPassword)) {
+            session_start(); 
+            $_SESSION['user_id'] = $row['user_id'];
+            $_SESSION['username'] = $row['username'];
+
+            echo "<script>alert('Login successful. You are now logged in.')</script>";
+            echo "<script>window.location.href='index.php';</script>";
+        } else {
+            echo "<script>alert('Invalid email or password. Please try again.')</script>";
+        }
+    } else {
+        echo "<script>alert('User not found. Please register or check your email.')</script>";
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +109,11 @@ include('includes/connect.php');
                 <label for="email" class="input-group-text" id="basic-addon2"><i class="fa-solid fa-envelope"></i> Email:</label>
                 <input type="email" class="form-control" name="email" id="email" placeholder="parminder@gmail.com" aria-label="Email" aria-describedby="basic-addon2">
             </div>
-            
+            <div class="input-group">
+                <label for="password" class="input-group-text" id="basic-addon3"><i class="fa-solid fa-lock"></i> Password:</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="" aria-label="Password" aria-describedby="basic-addon3">
+            </div>
+            <button class="my-button" style="font-size: 20px;" name="login">Login</button>
         </form>
         <p style="font-size: 14px;">Don't have an account? <a class="register-link" href="users_registration.php">Create Account</a></p>
     </div>
