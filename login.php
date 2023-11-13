@@ -87,7 +87,7 @@ include('includes/connect.php');
             </div>
             
         </form>
-        <p style="font-size: 14px;">Don't have an account? <a class="register-link" href="users_registration.php">Create Account</a></p>
+        <p style="font-size: 14px;">Don't have an account? <a class="register-link" href="registration.php">Create Account</a></p>
     </div>
 </body>
 </html>
