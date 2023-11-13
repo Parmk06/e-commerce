@@ -31,10 +31,31 @@
                 </div>   
         </div>
    </div>
+<!----login--->
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <ul class="navbar-nav me-auto">
+        <?php
+        if (isset($_SESSION['username'])) {
+            echo '<li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white;">Welcome, ' . $_SESSION['username'] .  '</a>
+                  </li>';
+        } else {
+            echo '<li class="nav-item">
+                    <a class="nav-link" href="#" style="color: white;">Welcome guest!</a>
+                  </li>';
+        }
+        ?> 
+        <li class="nav-item">
+            <a class="nav-link" href="login.php" style="color: white;">Login</a>
+        </li>
+    </ul>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-
-    </nav>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="logout.php" style="color: white;">Log Out</a>
+        </li>
+    </ul>
+</nav>
     <div class="bg-secondary p-3 text-right bg-secondary">
     <p>© PYElectronics- All Rights Reserved.</p>
     </div>
