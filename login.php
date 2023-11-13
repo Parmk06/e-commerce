@@ -8,6 +8,51 @@ include('includes/connect.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Login</title>
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            padding: 50px;
+            background-color: #F0dd71;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #007bff;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group-text {
+            color: black;
+            padding-right: 10px;
+        }
+
+        .form-control {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+      
+    </style>
     
 </head>
 <body>
