@@ -19,6 +19,19 @@
    
 </head>
 <body>
+<div class="container-fluid p-0">
+    <!-- fist child -->
+    <nav class="navbar navbar-expand-lg bg-warning">
+  <div class="container-fluid">
+    <img src="./images/e_commerce_logo.jpg" alt="" class="logo">
     
+ 
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+        <li class="nav-item">
+          <a class="nav-link"  href="index.php" style="color: black;">Home</a>
+        </li>
 </body>
 </html>
