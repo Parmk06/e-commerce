@@ -2,7 +2,17 @@
 
 include('includes/connect.php');
 //adding database queries shortly
+if (isset($_POST['register'])) {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = $_POST['password']; // It's recommended to hash passwords before storing them in the database
+    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+    $registration_date = date('Y-m-d H:i:s'); // Current date and time
 
+    // Check if the email is already registered
+    $checkEmailQuery = "SELECT * FROM users WHERE email='$email'";
+    $result = mysqli_query($con, $checkEmailQuery);
+}
 
 ?>
  
@@ -13,7 +23,9 @@ include('includes/connect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
 </head>
-
+<style>
+    
+</style>
 <div class="container">
     <h3 class="text-center" style="color: #007bff; padding: 0px; font-size: 28px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
         PY-Electronics
