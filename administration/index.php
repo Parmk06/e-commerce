@@ -1,3 +1,16 @@
+<!-- Connect file -->
+<?php
+
+session_start();
+if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
+    // Not working
+    echo "<script>alert('You have been successfully logged out.')</script>";
+    
+}
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
