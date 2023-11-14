@@ -44,7 +44,7 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
         text-decoration: none;
         color: white;
         display: block;
-        padding: 10px; /* Adjust the padding to your preference */
+        padding: 10px;
     }
 
     .admin_image {
