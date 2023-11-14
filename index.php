@@ -79,6 +79,13 @@ include('functions/functions.php');
                     <a class="nav-link" href="#"  style="color: black;">Total Price:<?php total_cart_price();?></a>
                     </li>
                     </ul>
+                    <form class="d-flex" action="search_product.php" method="get">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data_product">
+                    <input type="submit" value="Search" class="btn btn-outline-light" style="color: black;" >
+                </form>
+                </div>
+            </div>
+            </nav>
                 </div>   
             </div>
         </div>
@@ -102,7 +109,6 @@ include('functions/functions.php');
               </li>';
     }
     ?> 
-
 
     <li class="nav-item">
     <a class="nav-link" href="login.php" style="color: white;">Login</a>
