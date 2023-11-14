@@ -3,7 +3,6 @@
 // including connect file
 include('./includes/connect.php');
 
-
 function getdevices(){
 
     global $con;

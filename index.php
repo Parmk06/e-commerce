@@ -32,7 +32,7 @@ include('functions/functions.php');
     <link rel="stylesheet" href="style.css">
    
 </head>
-<style>
+<!-- <style>
         .container {
             max-width: 500px; 
             padding: 50px;
@@ -51,12 +51,12 @@ include('functions/functions.php');
             width: 100px; 
             height: auto; 
         }
-    </style>
+    </style> -->
     <body>
         <div class="container-fluid p-0">
             <nav class="navbar navbar-expand-lg bg-secondary">
             <div class="container-fluid">
-                <img src="./images/e-commerce_logo.jpg" alt="" class="logo">
+                <img src="./images/e-commerce-logo.jpg" alt="" class="logo">
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -69,6 +69,16 @@ include('functions/functions.php');
                     <li class="nav-item">
                     <a class="nav-link" href="registration.php" style="color: black;">Register</a>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="contact.php" style="color: black;">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="cart.php"  style="color: black;"><i class="fa-solid fa-cart-shopping"></i><sup><?php cart_item();?></sup></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"  style="color: black;">Total Price:<?php total_cart_price();?></a>
+                    </li>
+                    </ul>
                 </div>   
             </div>
         </div>
