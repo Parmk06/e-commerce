@@ -34,69 +34,91 @@ if (isset($_POST['login'])) {
     <title>User Login</title>
     <style>
         body {
-            background-color: #f7f7f7;
             font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
 
         .container {
-            max-width: 500;
-            padding: 50px;
-            background-color: #FFC0CB; 
+            max-width: 400px;
+            padding: 90px;
+            background-color: #fff;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
-        h2 {
+        h3 {
             color: #007bff;
+            font-size: 28px;
             font-weight: bold;
-            margin-bottom: 20px;
-            font-size: 24px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: black;
+            margin-top: 10px;
         }
 
         .input-group {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
-        .input-group-text {
-            color: black;
+        .input-group-label {
+            display: flex;
+            align-items: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
 
-            padding-right: 10px;
+        .input-group-label i {
+            margin-right: 10px;
         }
 
         .form-control {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
             border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 20px;
-        }
-        .my-button {
-            background-color: #007bff;
-            margin-right: 15px;
-            margin-bottom: 15px;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            display: inline-block;
-            text-align: center;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
 
-        .my-button a {
-            text-decoration: none;
-            color: white;
+        .my-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 14px;
+            font-size: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .my-button:hover {
+            background-color: #0056b3;
         }
 
         .register-link {
-            font-size: 14px;
-            text-decoration: none;
             color: #007bff;
         }
-      
+
+        .register-link:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>

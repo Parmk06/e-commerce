@@ -29,6 +29,7 @@ if (isset($_POST['register'])) {
 <html lang="en">
     <style>
         body {
+            background-color: #ff69b4;
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
