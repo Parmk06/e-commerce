@@ -1,3 +1,16 @@
+<!-- Connect file -->
+<?php
+
+session_start(); // session has started
+if (isset($_GET['logout']) && $_GET['logout'] == 1) {
+    echo "<script>alert('You have been successfully logged out.')</script>";
+    
+}
+
+include('includes/connect.php');
+include('functions/functions.php');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +35,7 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-secondary">
         <div class="container-fluid">
-                <img src="./images/e_commerce_logo.jpg" alt="" class="logo">
+                <img src="./images/e-commerce_logo.jpg" alt="" class="logo">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">

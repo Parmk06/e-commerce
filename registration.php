@@ -32,7 +32,7 @@ if (isset($_POST['register'])) {
     align-items: center;
     height: 100vh;
     margin: 0;
-}
+   }
 
 .container {
     max-width: 400px;
@@ -114,7 +114,7 @@ h2 {
         </div>
 
         <!-- <div class="my-button"> -->
-        <button class="my-button" style="font-size: 20px;" name="register">
+        <button class="my-button" style="font-size: 14px;" name="register">
             Register Your Account
         </button>
     </form>
