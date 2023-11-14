@@ -24,63 +24,81 @@ if (isset($_POST['register'])) {
     <title>User Registration</title>
 </head>
 <style>
-    body {
-    background-color: #f7f7f7;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-   }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-.container {
-    max-width: 400px;
-    padding: 50px;
-    background-color: #F0dd71;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
+        .container {
+            max-width: 400px;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-h2 {
-    color: #007bff;
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-.input-group {
-    margin-bottom: 20px;
-}
+        h3 {
+            color: #007bff;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
 
-.input-group-text {
-    color: black;
-    padding-right: 10px;
-}
+        h2 {
+            color: red;
+            margin-top: 10px;
+        }
 
-.form-control {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 16px;
-}
+        .input-group {
+            margin-bottom: 20px;
+        }
 
-.my-button {
-    background-color: #007bff;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-    display: inline-block;
-    text-align: center;
-}
+        .input-group-label {
+            display: flex;
+            align-items: center;
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px;
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
 
-.my-button a {
-    text-decoration: none;
-    color: white;
-}
+        .input-group-label i {
+            margin-right: 10px;
+        }
 
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .my-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 14px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .my-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </style>
 <div class="container">
     <h3 class="text-center" style="color: #007bff; padding: 0px; font-size: 28px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
