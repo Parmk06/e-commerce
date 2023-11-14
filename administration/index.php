@@ -85,5 +85,23 @@
             </div>
         </div>
     </div>
+    
+    <div class="container my-3">
+        <?php
+        if(isset($_GET['insert_category'])){
+             include('insert_categories.php');
+        }
+        ?>
+     </div>
+ <!---footer-->
+    <div class="bg-info p-3 text-right bg-secondary">
+    <p>© PY-Electronics</p>
+    </div>
+
+</div>
+    <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" rel="stylesheet"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
 
 </body>
+</html>
