@@ -63,7 +63,7 @@ h2 {
     <form action="" method="post" class="mb-2">
         <div class="input-group">
             <label for="username" class="input-group-text" id="basic-addon1">
-                <i class="fa-solid fa-user"></i> Name:
+                <i class="fa-solid fa-user"></i> Full Name:
             </label>
             <input type="text" class="form-control" name="username" id="username" placeholder="Parminder" aria-label="Username" aria-describedby="basic-addon1">
         </div>
