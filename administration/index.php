@@ -8,8 +8,6 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
     
 }
 
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +30,7 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
     
     <style>
     .my-button {
-        background-color: #007bff;
+        background-color: palevioletred;
         margin-right: 15px;
         margin-bottom: 15px;
         border: none;
@@ -45,6 +43,31 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
     .my-button a {
         text-decoration: none;
         color: white;
+        display: block;
+        padding: 10px; /* Adjust the padding to your preference */
+    }
+
+    .admin_image {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Additional styling for navbar and header */
+    .navbar {
+        background-color: palevioletred;
+        padding: 10px;
+    }
+
+    .header {
+        background-color: #f7f7f7;
+        text-align: center;
+        padding: 10px;
+        color: black;
+        font-size: 36px;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
     </style>
 </head>
@@ -81,7 +104,7 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
         <div class="col-md-12 bg-secondary p-1 d-flex align-items-center">
             <div class="p-5"> 
                 <a href="#"><img src="../images/admin-logo.jpg" alt="" class="admin_image"></a>
-                <p class="text-light text-center">Admin SAP</p>
+                <p class="text-light text-center">Admin</p>
             </div>
 
             <div class="button text-center">
@@ -107,7 +130,7 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
         ?>
      </div>
  <!---footer-->
-    <div class="bg-info p-3 text-right bg-secondary">
+    <div class="bg-secondary p-3 text-right bg-secondary">
     <p>© PY-Electronics</p>
     </div>
 
