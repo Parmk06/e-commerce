@@ -17,6 +17,22 @@
     <!-- CSS file -->
     <link rel="stylesheet" href="../style.css">
     
+    <style>
+    .my-button {
+        background-color: #007bff;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        border: none;
+        padding: 5px;
+        border-radius: 5px;
+        display: inline-block;
+        text-align: center;
+    }
 
+    .my-button a {
+        text-decoration: none;
+        color: white;
+    }
+    </style>
 
 </head>
