@@ -104,7 +104,7 @@ if (isset($_POST['register'])) {
 </style>
 <body class="bg-secondary">
 <div class="container">
-    <h3 class="text-center" style="color: #007bff; padding: 0px; font-size: 28px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
+    <h3 class="text-center" style="color: black; padding: 0px; font-size: 28px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
         PY-Electronics
     </h3>
 
