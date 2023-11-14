@@ -4,9 +4,9 @@
     box-sizing: border-box;
   }
   
-  .e-commerce_logo{
-    width: 7%;
-    height: 7%;
+  .e-commerce-logo{
+    width: 10px;
+    height: auto;
   }
 
   .card-img-top {

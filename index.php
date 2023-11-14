@@ -31,12 +31,32 @@ include('functions/functions.php');
     <link rel="stylesheet" href="style.css">
    
 </head>
-<body>
-    <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg bg-secondary">
-        <div class="container-fluid">
+<style>
+        .container {
+            max-width: 500px; 
+            padding: 50px;
+            background-color: #FFC0CB;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .form-control {
+            font-size: 18px; 
+        }
+
+        .logo{
+            width: 100px; 
+            height: auto; 
+        }
+    </style>
+    <body>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg bg-secondary">
+            <div class="container-fluid">
                 <img src="./images/e-commerce_logo.jpg" alt="" class="logo">
-                   
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -49,8 +69,8 @@ include('functions/functions.php');
                     <a class="nav-link" href="registration.php" style="color: black;">Register</a>
                     </li>
                 </div>   
+            </div>
         </div>
-   </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
 
