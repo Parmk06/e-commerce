@@ -10,6 +10,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
 include('includes/connect.php');
 include('functions/functions.php');
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -75,11 +76,43 @@ include('functions/functions.php');
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
 
     </nav>
-    <div class="bg-secondary p-3 text-right bg-secondary">
-    <p>© PYElectronics- All Rights Reserved.</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+
+<ul class="navbar-nav me-auto">
+  
+<!-----login----->
+ <?php
+    if (isset($_SESSION['username'])) {
+        echo '<li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">Welcome, ' . $_SESSION['username'] .  '</a>
+              </li>';
+    } else {
+        echo '<li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">Welcome guest!</a>
+              </li>';
+    }
+    ?> 
+
+
+    <li class="nav-item">
+    <a class="nav-link" href="login.php" style="color: white;">Login</a>
+    </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+    <a class="nav-link" href="logout.php" style="color: white;">Log Out</a>
+    </li>
+    </ul>
+
+    </nav>
+        <div class="bg-secondary p-3 text-right bg-secondary">
+        <p>© PYElectronics- All Rights Reserved.</p>
+        </div>
+
     </div>
 
-</div>
+
 
 <!-- bootstrap JS link -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 

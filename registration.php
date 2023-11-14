@@ -7,11 +7,22 @@ if (isset($_POST['register'])) {
     $email = $_POST['email'];
     $password = $_POST['password']; // It's recommended to hash passwords before storing them in the database
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-    $registration_date = date('Y-m-d H:i:s'); // Current date and time
-
+  
     // Check if the email is already registered
     $checkEmailQuery = "SELECT * FROM users WHERE email='$email'";
     $result = mysqli_query($con, $checkEmailQuery);
+    
+    if (mysqli_num_rows($result) > 0) {
+        echo "<script>alert('Email already registered. Please log in.')</script>";
+    } else {
+        $insertQuery = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPassword')";
+        if (mysqli_query($con, $insertQuery)) {
+            echo "<script>alert('Your account has been registered successfully. Please log in yourself to continue.')</script>";
+            echo "<script>window.location.href='login.php';</script>";
+        } else {
+            echo "<script>alert('Registration failed. Please try again later.')</script>";
+        }
+    }
 }
 
 ?>

@@ -128,7 +128,7 @@ if(isset($_POST['insert_device'])){
             <!-- submit -->
 
             <div class="form-outline mb-4 w-50 m-auto">
-                <input type="submit" name="insert_device" class="btn btn-info mb-3 px-3" value="Insert Device">
+                <input type="submit" name="insert_device" class="btn btn-dark mb-3 px-3" value="Insert Device">
             </div>
         </form>
 

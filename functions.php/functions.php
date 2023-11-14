@@ -35,7 +35,7 @@ function getdevices(){
                         <p class='card-text'>Price: $$device_price</p>
                         <a href='index.php?add_to_cart=$device_id' class='btn btn-info' style='color: white; background-color: #007bff; padding: 5px 10px; text-decoration: none;'>Add to cart</a>
                         
-                        <a href='product_details.php?product_id=$device_id' class='btn btn-secondary'>View</a>
+                        <a href='device_details.php?product_id=$device_id' class='btn btn-secondary'>View</a>
                         </div>
         </div>
       </div>";
