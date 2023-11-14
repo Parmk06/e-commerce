@@ -50,6 +50,37 @@ h2 {
     margin-bottom: 20px;
     font-size: 24px;
 }
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group-text {
+    color: black;
+    padding-right: 10px;
+}
+
+.form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.my-button {
+    background-color: #007bff;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.my-button a {
+    text-decoration: none;
+    color: white;
+}
+
 </style>
 <div class="container">
     <h3 class="text-center" style="color: #007bff; padding: 0px; font-size: 28px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
