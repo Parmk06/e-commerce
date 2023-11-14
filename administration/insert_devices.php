@@ -23,15 +23,15 @@ if(isset($_POST['insert_device'])){
         exit();
 
     }else{
-            move_uploaded_file($tmp_image,"./product_images/$device_image");
+            move_uploaded_file($tmp_image,"./_images/$device_image");
 
             //insert products
-            $insert_devices="insert into `products` (product_title,product_description,product_keywords,category_id,product_image,product_price,date,status) values ('$product_title','$description','$product_keywords','$product_category','$product_image','$product_price',NOW(),'$product_status')";
+            $insert_devices="insert into `devices` (device_title,device_description,device_keywords,category_id,device_image,device_price,date,status) values ('$device_title','$description','$device_keywords','$device_category','$device_image','$device_price',NOW(),'$device_status')";
 
             $result_query=mysqli_query($con,$insert_devices);
             if($result_query){
 
-                echo "<script>alert('Successfully inserted the products')</script>";
+                echo "<script>alert('Successfully inserted the devices')</script>";
 
         }
 
@@ -43,7 +43,7 @@ if(isset($_POST['insert_device'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insert Products - Admin Dashboard</title>
+    <title>Insert Devices - Admin Dashboard</title>
 
     <!-- bootstrap css link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
@@ -69,16 +69,16 @@ if(isset($_POST['insert_device'])){
         <!-- title -->
         <form action="" method="post" enctype="multipart/form-data">
             <div class="form-outline mb-4 w-50 m-auto">
-                <label for="product_title" class="form-label">Product Title</label>
-                <input type="text" name="device_title" id="device_title" class="form-control" placeholder="Enter product title" autocomplete="off" required="required"> 
+                <label for="device_title" class="form-label">Device Title</label>
+                <input type="text" name="device_title" id="device_title" class="form-control" placeholder="Enter device title" autocomplete="off" required="required"> 
             </div>
         
 
         <!-- description -->
 
             <div class="form-outline mb-4 w-50 m-auto">
-                <label for="description" class="form-label">Product description</label>
-                <input type="text" name="description" id="description" class="form-control" placeholder="Enter product description" autocomplete="off" required="required"> 
+                <label for="description" class="form-label">Device description</label>
+                <input type="text" name="description" id="description" class="form-control" placeholder="Enter device description" autocomplete="off" required="required"> 
             </div>
 
         <!-- keywords -->
@@ -91,7 +91,7 @@ if(isset($_POST['insert_device'])){
         <!-- categories -->
 
             <div class="form-outline mb-4 w-50 m-auto">
-                <select name="product_category" id="" class="form-select">
+                <select name="device_category" id="" class="form-select">
 
                     <option value="">Select a Categories</option>
 
