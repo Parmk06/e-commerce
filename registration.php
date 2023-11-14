@@ -36,7 +36,7 @@ if (isset($_POST['register'])) {
 
         .container {
             max-width: 400px;
-            padding: 30px;
+            padding: 90px;
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -78,11 +78,12 @@ if (isset($_POST['register'])) {
 
         .form-control {
             width: 100%;
-            padding: 12px;
+            padding: 15px;
             font-size: 16px;
             border: 1px solid #ddd;
             border-radius: 4px;
             box-sizing: border-box;
+            
         }
 
         .my-button {
@@ -100,6 +101,7 @@ if (isset($_POST['register'])) {
         }
     </style>
 </style>
+<body class="bg-secondary">
 <div class="container">
     <h3 class="text-center" style="color: #007bff; padding: 0px; font-size: 28px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">
         PY-Electronics
