@@ -1,3 +1,17 @@
+<?php
+include('../includes/connect.php');
+
+if (isset($_POST['register'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // check if username already exist
+    $checkUsernameQuery = "SELECT * FROM admin_login WHERE username='$username'";
+    $checkResult = mysqli_query($con, $checkUsernameQuery);
+
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
