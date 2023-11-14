@@ -9,6 +9,19 @@ if (isset($_POST['register'])) {
     $checkUsernameQuery = "SELECT * FROM admin_login WHERE username='$username'";
     $checkResult = mysqli_query($con, $checkUsernameQuery);
 
+    if (mysqli_num_rows($checkResult) == 0) {
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+        $insertAdminQuery = "INSERT INTO admin_login (username, password) VALUES ('$username', '$hashedPassword')";
+        $insertResult = mysqli_query($con, $insertAdminQuery);
+
+        if ($insertResult) {
+            echo "<script>alert('Admin registration successful. You can now log in.')</script>";
+        } else {
+            echo "<script>alert('Admin registration failed. Please try again.')</script>";
+        }
+    } else {
+        echo "<script>alert('Username is already in use. Please choose a different username.')</script>";
+    }
     
 }
 ?>
