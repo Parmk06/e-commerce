@@ -40,7 +40,7 @@ if (isset($_POST['register'])) {
 
         .container {
             max-width: 400px;
-            padding: 30px;
+            padding: 90px;
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 8px;
