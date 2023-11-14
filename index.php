@@ -72,14 +72,8 @@ include('functions/functions.php');
                     <li class="nav-item">
                     <a class="nav-link" href="contact.php" style="color: black;">Contact</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="cart.php"  style="color: black;"><i class="fa-solid fa-cart-shopping"></i><sup><?php cart_item();?></sup></a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#"  style="color: black;">Total Price:<?php total_cart_price();?></a>
-                    </li>
                     </ul>
-                    <form class="d-flex" action="search_product.php" method="get">
+                <form class="d-flex" action="search_product.php" method="get">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data_product">
                     <input type="submit" value="Search" class="btn btn-outline-light" style="color: black;" >
                 </form>
@@ -89,39 +83,85 @@ include('functions/functions.php');
                 </div>   
             </div>
         </div>
-
+ 
     <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
 
-    </nav>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <ul class="navbar-nav me-auto">
+        <?php
+            if (isset($_SESSION['username'])) {
+                echo '<li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white;">Welcome, ' . $_SESSION['username'] .  '</a>
+                    </li>';
+            } else {
+                echo '<li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white;">Welcome guest!</a>
+                    </li>';
+            }
+            ?> 
 
-<ul class="navbar-nav me-auto">
-  
-<!-----login----->
- <?php
-    if (isset($_SESSION['username'])) {
-        echo '<li class="nav-item">
-                <a class="nav-link" href="#" style="color: white;">Welcome, ' . $_SESSION['username'] .  '</a>
-              </li>';
-    } else {
-        echo '<li class="nav-item">
-                <a class="nav-link" href="#" style="color: white;">Welcome guest!</a>
-              </li>';
-    }
-    ?> 
-
-    <li class="nav-item">
-    <a class="nav-link" href="login.php" style="color: white;">Login</a>
-    </li>
+        <li class="nav-item">
+        <a class="nav-link" href="login.php" style="color: white;">Login</a>
+        </li>
     </ul>
 
     <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-    <a class="nav-link" href="logout.php" style="color: white;">Log Out</a>
+       <a class="nav-link" href="logout.php" style="color: white;">Log Out</a>
     </li>
-    </ul>
-
+      </ul>
+      
     </nav>
+
+    <div class="row px-1">
+
+
+
+
+    <!-- Side Nav -->
+    <div class="col-md-2 bg-secondary p-0">
+        <ul class="navbar-nav me-auto text-center">  
+
+        <li class="nav-item bg-warning">
+        <a href="#" class="nav-link text-dark"><h4>Categories</h4></a>
+        </li> 
+
+        <?php
+
+        getcategories(); 
+
+        ?>
+
+    </ul>
+    </div>
+
+     <!-- Products -->
+<div class="col-md-10">
+    <div class="row">
+
+<!-- Fetching Products -->
+   <?php
+  // Calling functins   
+    //search_device();
+    getdevices();
+   
+  
+    ?>
+
+<!-- row end -->
+    </div>
+
+<!-- col end -->
+  </div>
+
+</div>
+
+
+
+
+
+
+
+    <!----footer----->
         <div class="bg-secondary p-3 text-right bg-secondary">
         <p>© PYElectronics- All Rights Reserved.</p>
         </div>
