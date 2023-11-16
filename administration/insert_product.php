@@ -142,4 +142,4 @@ if(isset($_POST['insert_product'])){
     </div>
     
 </body>
-</html>
+</html>S

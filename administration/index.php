@@ -109,7 +109,7 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
 
             <div class="button text-center">
             
-                <button class="my-button" ><a href="insert_devices.php" class="nav-link">Insert Devices</a></button>
+                <button class="my-button" ><a href="insert_products.php" class="nav-link">Insert Products</a></button>
 
                 <button class="my-button"><a href="index.php?insert_category" class="nav-link">Insert Categories</a></button>
 
