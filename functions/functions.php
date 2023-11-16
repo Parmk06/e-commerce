@@ -28,7 +28,7 @@ function get_unique_categories(){
 
     $product_id=$row['product_id'];
     $product_title=$row['product_title'];
-    $product_description=$row['product_description'];
+    $description=$row['description'];
     // $product_keywords=$row['product_keywords'];
     $category_id=$row['category_id'];
     $product_image=$row['product_image'];
@@ -39,7 +39,7 @@ function get_unique_categories(){
                       <img src='./admin_area/product_images/$product_image' class='card-img-top' alt='$product_title'>
                       <div class='card-body'>
                       <h5 class='card-title'>$product_title</h5>
-                      <p class='card-text'>$product_description</p>
+                      <p class='card-text'>$description</p>
                       <p class='card-text'>Price: $$product_price</p>
                       <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
                       <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
@@ -71,7 +71,7 @@ function getproducts(){
 
     $product_id=$row['product_id'];
     $product_title=$row['product_title'];
-    $product_description=$row['product_description'];
+    $description=$row['description'];
     // $product_keywords=$row['product_keywords'];
     $category_id=$row['category_id'];
     $product_image=$row['product_image'];
@@ -82,7 +82,7 @@ function getproducts(){
                       <img src='./admin_area/product_images/$product_image' class='card-img-top' alt='$product_title'>
                       <div class='card-body'>
                       <h5 class='card-title'>$product_title</h5>
-                      <p class='card-text'>$product_description</p>
+                      <p class='card-text'>$description</p>
                       <p class='card-text'>Price: $$product_price</p>
                       <a href='index.php?add_to_cart=$product_id' class='btn btn-info' style='color: white; background-color: #007bff; padding: 5px 10px; text-decoration: none;'>Add to cart</a>
                       
@@ -97,24 +97,24 @@ function getproducts(){
 
 }
 
-// function getcategories(){
+function getcategories(){
 
-//     global $con;
+    global $con;
 
-//     $select_categories = "Select * from `categories`";
+    $select_categories = "Select * from `categories`";
 
-//     $result_categories = mysqli_query($con,$select_categories);
+    $result_categories = mysqli_query($con,$select_categories);
    
-//     while($row_data = mysqli_fetch_assoc($result_categories)){
+    while($row_data = mysqli_fetch_assoc($result_categories)){
     
-//       $category_title = $row_data['category_title'];
-//       $category_id = $row_data['category_id'];
-//       // echo $category_title;
-//       echo " <li class='nav-item'>
-//       <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
-//      </li>";
-//     }
+      $category_title = $row_data['category_title'];
+      $category_id = $row_data['category_id'];
+      // echo $category_title;
+      echo " <li class='nav-item'>
+      <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
+     </li>";
+    }
 
-// }
+}
 
 

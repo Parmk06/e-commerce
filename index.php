@@ -126,28 +126,8 @@ include('functions/functions.php');
         </li>
 
          <?php 
-        function getcategories(){
+        getcategories();
 
-        global $con;
-
-        $select_categories = "Select * from `categories`";
-
-        $result_categories = mysqli_query($con,$select_categories);
-        // $row_data = mysqli_fetch_assoc($result_categories);
-        // echo $row_data['category_title'];
-        // echo $row_data['category_title'];
-        
-        while($row_data = mysqli_fetch_assoc($result_categories)){
-        
-        $category_title = $row_data['category_title'];
-        $category_id = $row_data['category_id'];
-        // echo $category_title;
-        echo " <li class='nav-item'>
-        <a href='index.php?category=$category_id' class='nav-link text-light'>$category_title</a>
-        </li>";
-        }
-
-    }
     ?>
 
     </ul>

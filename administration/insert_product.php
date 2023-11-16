@@ -27,7 +27,7 @@ if(isset($_POST['insert_product'])){
             move_uploaded_file($tmp_image,"./product_images/$product_image");
 
             //insert products
-            $insert_products="insert into `products` (product_title,product_description,product_keywords,category_id,product_image,product_price,date,status) values ('$product_title','$description','$product_keywords','$product_category','$product_image','$product_price',NOW(),'$product_status')";
+            $insert_products="insert into `products` (product_title,description,product_keywords,category_id,product_image,product_price,date,status) values ('$product_title','$description','$product_keywords','$product_category','$product_image','$product_price',NOW(),'$product_status')";
 
             $result_query=mysqli_query($con,$insert_products);
             if($result_query){
