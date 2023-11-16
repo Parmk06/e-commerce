@@ -171,9 +171,6 @@ include('functions/functions.php');
 
 </div>
 
-
-
-
     <!----footer----->
         <div class="bg-secondary p-3 text-right bg-secondary">
         <p>© PYElectronics- All Rights Reserved.</p>
