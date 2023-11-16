@@ -159,7 +159,7 @@ include('functions/functions.php');
 
 <!-- Fetching Products -->
    <?php
-   getdevices();
+   getproducts();
    get_unique_categories();
     ?>
 
