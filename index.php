@@ -123,61 +123,10 @@ include('functions/functions.php');
 
         <li class="nav-item bg-warning">
         <a href="#" class="nav-link text-dark"><h4>Categories</h4></a>
-        </li> 
+        </li>
 
-    <?php
-
-function get_unique_categories(){
-
-    global $con;
-
-    //condition to check isset or not
-
-    if(isset($_GET['category'])){
-
-        $category_id=$_GET['category'];
-
-    $select_query="Select * from `devices` where category_id=$category_id"; //0 to 9 is limit of products on one page
-    $result_query=mysqli_query($con,$select_query);
-
-    $num_of_rows=mysqli_num_rows($result_query);
-    if($num_of_rows==0){
-      echo "<h2 class = 'text-center text-danger mt-4'> Sorry! No Stock available for this category</h2>";
-      echo "<h2 class = 'text-center text-danger'> :-( </h2>";
-
-    }
-
-    // $row=mysqli_fetch_assoc($result_query);
-    // echo $row['product_title'];
-    while($row=mysqli_fetch_assoc($result_query)){
-
-      $device_id=$row['device_id'];
-      $device_title=$row['device_title'];
-      $device_description=$row['product_description'];
-      // $product_keywords=$row['product_keywords'];
-      $device_id=$row['category_id'];
-      $device_image=$row['product_image'];
-      $device_price=$row['product_price'];
-
-      echo "<div class='col-md-4 mb-2'>
-            <div class='card'>
-                        <img src='./admin_area/product_images/$device_image' class='card-img-top' alt='$$device_title'>
-                        <div class='card-body'>
-                        <h5 class='card-title'>$device_title</h5>
-                        <p class='card-text'>$device_description</p>
-                        <p class='card-text'>Price: $$device_price</p>
-                        <a href='index.php?add_to_cart = $device_id' class='btn btn-info'>Add to cart</a>
-                        <a href='product_details.php?product_id=$device_id' class='btn btn-secondary'>View more</a>
-                        </div>
-        </div>
-      </div>";
-      // We can remove "<a href='#' class='btn btn-secondary'>View more</a>" as we will not have other pictures to view more
-      
-    }
-}
-
-}
-    function getcategories(){
+         <?php 
+        function getcategories(){
 
         global $con;
 
@@ -198,9 +147,8 @@ function get_unique_categories(){
         </li>";
         }
 
-}
-
-        ?>
+    }
+    ?>
 
     </ul>
     </div>
@@ -211,7 +159,8 @@ function get_unique_categories(){
 
 <!-- Fetching Products -->
    <?php
-   getdevices()
+   getdevices();
+   get_unique_categories();
     ?>
 
 <!-- row end -->

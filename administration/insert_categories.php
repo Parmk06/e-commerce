@@ -1,8 +1,7 @@
 <?php
 include('../includes/connect.php');
 
-/*we are inserting the name that we mentioned below in the input type
-and when we will clicking the button, the data will be inserted into the database from the input*/ 
+ 
 
 if(isset($_POST['insert_cat'])){
     $category_title=$_POST['cat_title'];

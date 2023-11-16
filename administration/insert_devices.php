@@ -1,10 +1,10 @@
 <?php
 
 include('../includes/connect.php');
-if(isset($_POST['insert_device'])){
+if(isset($_POST['insert_devices'])){
 
     $device_title=$_POST['device_title'];
-    $description=$_POST['description'];
+    $device_description=$_POST['device_description'];
     $device_keywords=$_POST['device_keywords'];
     $device_category=$_POST['device_category'];
     $device_price=$_POST['device_price'];
@@ -17,7 +17,7 @@ if(isset($_POST['insert_device'])){
     $tmp_image=$_FILES['device_image']['tmp_name'];
 
     //checking if it is empty
-    if($device_title=='' or $description=='' or $device_keywords=='' or $device_category=='' or $device_price=='' or $device_image==''){
+    if($device_title=='' or $device_description=='' or $device_keywords=='' or $device_category=='' or $device_price=='' or $device_image==''){
 
         echo"<script>alert('Please fill all the available fields!')</script>";
         exit();
