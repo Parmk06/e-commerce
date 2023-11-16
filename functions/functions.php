@@ -95,8 +95,7 @@ function getproducts(){
   }
 }
 
-
-
+}
 function getcategories(){
 
     global $con;
@@ -117,4 +116,4 @@ function getcategories(){
 
 }
 
-}
+?>

@@ -128,7 +128,7 @@ include('functions/functions.php');
          <?php 
         getcategories();
 
-    ?>
+        ?>
 
     </ul>
     </div>
