@@ -28,21 +28,21 @@ function get_unique_categories(){
 
       $device_id=$row['device_id'];
       $device_title=$row['device_title'];
-      $device_description=$row['product_description'];
+      $device_description=$row['device_description'];
       // $product_keywords=$row['product_keywords'];
-      $device_id=$row['category_id'];
-      $device_image=$row['product_image'];
-      $device_price=$row['product_price'];
+      $category_id=$row['category_id'];
+      $device_image=$row['device_image'];
+      $device_price=$row['device_price'];
 
       echo "<div class='col-md-4 mb-2'>
             <div class='card'>
-                        <img src='./admin_area/product_images/$device_image' class='card-img-top' alt='$$device_title'>
+                        <img src='./administration/device_images/$device_image' class='card-img-top' alt='$$device_title'>
                         <div class='card-body'>
                         <h5 class='card-title'>$device_title</h5>
                         <p class='card-text'>$device_description</p>
                         <p class='card-text'>Price: $$device_price</p>
                         <a href='index.php?add_to_cart = $device_id' class='btn btn-info'>Add to cart</a>
-                        <a href='product_details.php?product_id=$device_id' class='btn btn-secondary'>View more</a>
+                        <a href='device_details.php?device_id=$device_id' class='btn btn-secondary'>View more</a>
                         </div>
         </div>
       </div>";
@@ -86,7 +86,7 @@ function getdevices(){
                         <p class='card-text'>Price: $$device_price</p>
                         <a href='index.php?add_to_cart=$device_id' class='btn btn-info' style='color: white; background-color: #007bff; padding: 5px 10px; text-decoration: none;'>Add to cart</a>
                         
-                        <a href='device_details.php?product_id=$device_id' class='btn btn-secondary'>View</a>
+                        <a href='device_details.php?device_id=$device_id' class='btn btn-secondary'>View</a>
                         </div>
         </div>
       </div>";
