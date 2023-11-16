@@ -95,7 +95,7 @@ function getproducts(){
   }
 }
 
-}
+
 
 function getcategories(){
 
@@ -117,4 +117,4 @@ function getcategories(){
 
 }
 
-
+}
