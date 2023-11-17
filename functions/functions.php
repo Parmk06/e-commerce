@@ -79,7 +79,7 @@ function search_product() {
 
               echo "<div class='col-md-4 mb-2'>
                   <div class='card'>
-                      <img src='./admin_area/product_images/$product_image' class='card-img-top' alt='$product_title'>
+                      <img src='./administration/product_images/$product_image' class='card-img-top' alt='$product_title'>
                       <div class='card-body'>
                           <h5 class='card-title'>$product_title</h5>
                           <p class='card-text'>$description</p>
@@ -119,7 +119,7 @@ function getproducts(){
 
     echo "<div class='col-md-4 mb-2'>
           <div class='card'>
-                      <img src='./admin_area/product_images/$product_image' class='card-img-top' alt='$product_title'>
+                      <img src='./administration/product_images/$product_image' class='card-img-top' alt='$product_title'>
                       <div class='card-body'>
                       <h5 class='card-title'>$product_title</h5>
                       <p class='card-text'>$description</p>
