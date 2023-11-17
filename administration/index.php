@@ -109,13 +109,15 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
 
             <div class="button text-center">
             
-                <button class="my-button" ><a href="insert_products.php" class="nav-link">Insert Products</a></button>
+                <button class="my-button" ><a href="insert_product.php" class="nav-link">Insert Products</a></button>
 
                 <button class="my-button"><a href="index.php?insert_category" class="nav-link">Insert Categories</a></button>
 
                 <button class="my-button"><a href="view_categories.php" class="nav-link">View Categories</a></button>
 
-                <button class="my-button"><a href="" class="nav-link">All Orders</a></button>
+                <button class="my-button"><a href="list_users.php" class="nav-link">List Users</a></button>
+                
+                <button class="my-button"><a href="view_contact_users.php" class="nav-link">View Contacted Users</a></button>
 
                 <button class="my-button"><a href="logout_admin.php" class="nav-link">Logout</a></button> 
             </div>
