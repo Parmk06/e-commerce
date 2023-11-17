@@ -72,7 +72,7 @@ function search_product() {
           while ($row = mysqli_fetch_assoc($result_query)) {
               $product_id = $row['product_id'];
               $product_title = $row['product_title'];
-              $product_description = $row['product_description'];
+              $description = $row['description'];
               $category_id = $row['category_id'];
               $product_image = $row['product_image'];
               $product_price = $row['product_price'];
@@ -82,7 +82,7 @@ function search_product() {
                       <img src='./admin_area/product_images/$product_image' class='card-img-top' alt='$product_title'>
                       <div class='card-body'>
                           <h5 class='card-title'>$product_title</h5>
-                          <p class='card-text'>$product_description</p>
+                          <p class='card-text'>$description</p>
                           <p class='card-text'>Price: $$product_price</p>
                           <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
                           <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View more</a>
