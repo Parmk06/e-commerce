@@ -104,7 +104,7 @@ if (isset($_POST['login'])) {
 </head>
 <body>
     <div class="container">
-        <h3 class="text-center" style="color: #007bff; padding: 0px; font-size: 28px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">SAP Admin Login</h3>
+        <h3 class="text-center" style="color: #007bff; padding: 0px; font-size: 28px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Admin Login</h3>
         <h2 class="text-center" style="color: red;">Log In</h2>
         <form action="" method="post" class="mb-2">
             <div class="input-group">

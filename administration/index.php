@@ -8,6 +8,7 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
     
 }
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +86,7 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="" class="nav-link" style="color: black;">
-                            <B><h5>Welcome!, <?php echo $_SESSION['admin_username']; ?></h5></B>
+                            <B><h5>Welcome!,<?php echo $_SESSION['admin_username']; ?></h5></B>
                         </a>
                     </li>
                 </ul>
