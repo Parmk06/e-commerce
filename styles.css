@@ -14,3 +14,33 @@
     width: 80px;
     object-fit: contain;
   }
+  
+/* styles.css */
+.my-button{
+  background-color: #007bff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.my-button a {
+  text-decoration: none;
+  color: white;
+}
+
+/* styles.css */
+.my-button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.my-button a {
+  text-decoration: none;
+  color: white;
+}
