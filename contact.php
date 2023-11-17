@@ -169,8 +169,7 @@ button[type="submit"]:hover {
 <div class="bg-light">
   <!-- <h3 class="text-center">SAP Conscious Clothing</h3> -->
   <!-- <p class="text-center"> Experience the Cultures Through Our Exquisite Attire Collection</p> -->
-<h3 class="text-center" style="color: #007bff; padding: 5px; font-size: 36px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">SAP Conscious Clothing</h3>
-<p class="text-center" style="font-size: 20px; color: #333; font-family: 'Arial', sans-serif; font-weight: normal;">Experience the Cultures Through Our Exquisite Attire Collection</p>
+<h3 class="text-center" style="color: #007bff; padding: 5px; font-size: 36px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">PY-Electronics</h3>
 
 </div>
 
