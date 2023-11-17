@@ -21,7 +21,73 @@ include('functions/functions.php');
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <!-- CSS Files -->
+ <link rel="stylesheet" href="style.css">
+    <style>
+    
+main {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
 
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    color: #666;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+    </style>
     
    
 </head>
