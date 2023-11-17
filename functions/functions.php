@@ -112,7 +112,7 @@ function getproducts(){
     $product_id=$row['product_id'];
     $product_title=$row['product_title'];
     $description=$row['description'];
-    // $product_keywords=$row['product_keywords'];
+    $product_keywords=$row['product_keywords'];
     $category_id=$row['category_id'];
     $product_image=$row['product_image'];
     $product_price=$row['product_price'];
@@ -125,8 +125,6 @@ function getproducts(){
                       <p class='card-text'>$description</p>
                       <p class='card-text'>Price: $$product_price</p>
                       <a href='index.php?add_to_cart=$product_id' class='btn btn-info' style='color: white; background-color: #007bff; padding: 5px 10px; text-decoration: none;'>Add to cart</a>
-                      
-                      <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'>View</a>
                       </div>
       </div>
     </div>";

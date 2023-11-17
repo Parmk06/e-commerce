@@ -132,7 +132,7 @@ include('functions/functions.php');
 <!-- Last Child -->
 <!-- LIKE EDEMAMMA -->
 
-<div class="bg-info p-3 text-right">
+<div class="bg-warning p-3 text-right">
   <p>© PY-Electronics</p>
 </div>
 
