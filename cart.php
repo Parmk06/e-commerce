@@ -49,7 +49,7 @@ if (isset($_POST['login'])) {
     <style>
         .cart_img {
             width: 100px;
-            height: 90px;
+            height: 100px;
             object-fit: contain;
         }   
     </style>
@@ -220,10 +220,9 @@ if (isset($_POST['update_cart'])) {
         <div class="d-flex mb-5">
           <h4 class="px-3">Subtotal: <strong class="" style="color: red;"><?php echo $total_price?><strong></h4>
           <a href="index.php" class="btn btn-info mx-3">Continue Shopping</a>
-          <!-- <a href="index.php" class="btn btn-secondary mx-3">Checkout</a> -->
 
-          <a href="<?php echo isset($_SESSION['username']) ? 'checkout.php' : 'login.php'; ?>" class="btn btn-secondary mx-3">
-    <?php echo isset($_SESSION['username']) ? 'Checkout' : 'Checkout'; ?>
+
+  
 </a>
         </div>
     </div>
