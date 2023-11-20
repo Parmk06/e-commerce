@@ -70,6 +70,13 @@ include('functions/functions.php');
                     <a class="nav-link" href="registration.php" style="color: black;">Register</a>
                     </li>
                     <li class="nav-item">
+                    <a class="nav-link" href="cart.php"  style="color: black;"><i class="fa-solid fa-cart-shopping"></i><sup><?php cart_item();?></sup></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#"  style="color: black;">Total Price:<?php total_cart_price();?></a>
+                    </li>
+                    
+                    <li class="nav-item">
                     <a class="nav-link" href="contact.php" style="color: black;">Contact</a>
                     </li>
                     </ul>
