@@ -233,9 +233,5 @@ function cart(){
       }
       echo $total_price;
     }
-  
-  
-  
-  
 
 ?>
