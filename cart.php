@@ -218,7 +218,7 @@ if (isset($_POST['update_cart'])) {
 
 
                     <td><?php echo $price_table?></td>
-                    <td><input type="checkbox" name="removeitem[]" value="<?php echo $product_id?>"></td>
+                    <td><input type="checkbox" name="remove_item[]" value="<?php echo $product_id?>"></td>
                     <td>
                         <!-- <button class = "bg-info px-3 py-2 border-0 mx-3">Update</button> -->
                         <input type="submit" value="Update Cart" class= "bg-info px-3 py-2 border-0 mx-3" name="update_cart">
@@ -246,7 +246,7 @@ if (isset($_POST['update_cart'])) {
 function remove_cart_item(){
   global $con;
   if(isset($_POST['remove_cart'])){
-    foreach($_POST['removeitem'] as $remove_id){
+    foreach($_POST['remove_item'] as $remove_id){
       echo $remove_id;
       $delete_query="Delete from `cart_details` where product_id=$remove_id";
       $run_delete=mysqli_query($con,$delete_query);
