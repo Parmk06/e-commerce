@@ -48,7 +48,7 @@ if (isset($_POST['login'])) {
     <link rel="stylesheet" href="style.css">
     <style>
         .cart_img {
-            width: 90px;
+            width: 100px;
             height: 90px;
             object-fit: contain;
         }   
@@ -61,7 +61,7 @@ if (isset($_POST['login'])) {
         <!-- fist child -->
         <nav class="navbar navbar-expand-lg bg-warning">
   <div class="container-fluid">
-    <img src="./images/SAP_logo.png" alt="" class="logo" >
+    <img src="./images/e-commerce-logo.png" alt="" class="logo" >
     
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -75,7 +75,7 @@ if (isset($_POST['login'])) {
         </li>
       
         <li class="nav-item">
-          <a class="nav-link" href="users_registration.php" style="color: black;">Register</a>
+          <a class="nav-link" href="registration.php" style="color: black;">Register</a>
         </li>
         <li class="nav-item">
         <a class="nav-link" href="contact.php" style="color: black;">Contact</a>
@@ -125,18 +125,6 @@ cart();
   </ul>
 
 </nav>
-
-
-
-
-<!-- Third Child -->
-<div class="bg-light">
-  <!-- <h3 class="text-center">SAP Conscious Clothing</h3> -->
-    <!-- <p class="text-center"> Experience the Cultures Through Our Exquisite Attire Collection</p> -->
-  <h3 class="text-center" style="color: #007bff; padding: 5px; font-size: 36px; font-weight: bold; font-family: 'Arial', sans-serif; text-transform: uppercase; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">SAP Conscious Clothing</h3>
-  <p class="text-center" style="font-size: 20px; color: #333; font-family: 'Arial', sans-serif; font-weight: normal;">Experience the Cultures Through Our Exquisite Attire Collection</p>
-
-</div>
 
 <!--fourth child-table --->
 <div class="container">
