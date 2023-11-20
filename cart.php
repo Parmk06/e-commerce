@@ -204,7 +204,6 @@ if (isset($_POST['update_cart'])) {
 }
 ?>
 
-
                     <td><?php echo $price_table?></td>
                     <td><input type="checkbox" name="remove_item[]" value="<?php echo $product_id?>"></td>
                     <td>
@@ -220,7 +219,9 @@ if (isset($_POST['update_cart'])) {
         <div class="d-flex mb-5">
           <h4 class="px-3">Subtotal: <strong class="" style="color: red;"><?php echo $total_price?><strong></h4>
           <a href="index.php" class="btn btn-info mx-3">Continue Shopping</a>
- 
+
+
+  
 </a>
         </div>
     </div>
