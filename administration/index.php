@@ -118,7 +118,7 @@ if (isset($_GET['logout_admin']) && $_GET['logout_admin'] == 1) {
 
                 <button class="my-button"><a href="list_users.php" class="nav-link">List Users</a></button>
                 
-                <button class="my-button"><a href="view_contact_users.php" class="nav-link">View Contacted Users</a></button>
+                <button class="my-button"><a href="view_contacted_users.php" class="nav-link">View Contacted Users</a></button>
 
                 <button class="my-button"><a href="logout_admin.php" class="nav-link">Logout</a></button> 
             </div>
