@@ -98,6 +98,9 @@ include('functions/functions.php');
     <div class="row px-1">
 
 
+ <?php
+cart();
+?>
 
 
     <!-- Side Nav -->
