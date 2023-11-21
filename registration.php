@@ -5,22 +5,27 @@ include('includes/connect.php');
 if (isset($_POST['register'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $password = $_POST['password']; // It's recommended to hash passwords before storing them in the database
+    $password = $_POST['password'];
+    $confirmPassword = $_POST['confirm_password']; // Changed to match the name attribute in the HTML form
     $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-  
-    // Check if the email is already registered
-    $checkEmailQuery = "SELECT * FROM users WHERE email='$email'";
-    $result = mysqli_query($con, $checkEmailQuery);
-    
-    if (mysqli_num_rows($result) > 0) {
-        echo "<script>alert('Email already registered. Please log in.')</script>";
+
+    if ($password !== $confirmPassword) {
+        echo "<script>alert('Your password and confirm password do not match.')</script>";
     } else {
-        $insertQuery = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPassword')";
-        if (mysqli_query($con, $insertQuery)) {
-            echo "<script>alert('Your account has been registered successfully. Please log in yourself to continue.')</script>";
-            echo "<script>window.location.href='login.php';</script>";
+        $checkEmailQuery = "SELECT * FROM users WHERE email='$email'";
+        $result = mysqli_query($con, $checkEmailQuery);
+
+        if (mysqli_num_rows($result) > 0) {
+            echo "<script>alert('Email already registered. Please log in.')</script>";
         } else {
-            echo "<script>alert('Registration failed. Please try again later.')</script>";
+            // Modified INSERT query to exclude 'confirm_password'
+            $insertQuery = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPassword')";
+            if (mysqli_query($con, $insertQuery)) {
+                echo "<script>alert('Your account has been registered successfully. Please log in yourself to continue.')</script>";
+                echo "<script>window.location.href='login.php';</script>";
+            } else {
+                echo "<script>alert('Registration failed. Please try again later.')</script>";
+            }
         }
     }
 }
@@ -143,6 +148,14 @@ if (isset($_POST['register'])) {
                 <i class="fa-solid fa-lock"></i> Password:
             </label>
             <input type="password" class="form-control" name="password" id="password" placeholder="" aria-label="Password" aria-describedby="basic-addon3">
+        </div>
+        
+        <!-- New Confirm Password input field -->
+        <div class="input-group">
+            <label for="confirm-password" class="input-group-text" id="basic-addon4">
+                <i class="fa-solid fa-lock"></i> Confirm Password:
+            </label>
+            <input type="password" class="form-control" name="confirm_password" id="confirm-password" placeholder="" aria-label="Confirm Password" aria-describedby="basic-addon4">
         </div>
 
         <!-- <div class="my-button"> -->
